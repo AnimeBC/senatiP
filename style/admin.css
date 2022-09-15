@@ -1,0 +1,128 @@
+body{background-color: black;overflow-y: auto;}
+#recargar{color: rgb(226, 226, 226);font-size: 2em;background-color: rgb(93, 92, 92);padding: 1%;border-radius: 15px;}
+#recargar:hover{background-color: rgb(93, 92, 92,0.5);cursor: pointer;transition: all 0.1;}
+#topContenido{display: grid;grid-template-columns: 20%50%20%;width: 80%;margin-left: 10%;margin-top: 2%;gap: 5%;}
+#crearUsuario{color:rgb(92, 92, 92);font-weight: bold;border-radius: 5px;
+    justify-self: right;padding: 4% 2% 4% 2%;background-color: white;width: 100%;text-align: center;}
+#crearUsuario:hover{box-shadow: -2px 1px 5px 8px white;cursor: pointer;transition: all 0.1s;}
+#buscador{color:rgb(92, 92, 92);font-weight: bold;border-radius: 5px;
+    justify-self: left;padding: 4% 2% 4% 2%;background-color: white;width: 100%;text-align: center;}
+#buscador:hover{box-shadow: -2px 1px 5px 8px white;cursor: pointer;transition: all 0.1s;}
+
+#barraBuscador{width: 100%;background-color: white;display: grid;
+    grid-template-columns: 80% 20%;border-radius: 15px;animation: animacion ease 1s;}
+@keyframes animacion {
+    0%{width: 0%;margin-left: -15%;}
+}
+#barraBuscador input{font-size: 1.5em;outline: none;border: solid 1px rgb(128, 125, 125);border-radius: 5px;
+color: rgb(60, 60, 60);font-family:'Times New Roman', Times, serif;}
+#barraBuscador button{font-size: 1em;outline: none;border: solid 1px rgb(128, 125, 125);border-radius: 5px;
+    color: rgb(255, 255, 255);font-family:'Times New Roman', Times, serif;
+    background-color: rgb(102, 102, 102);}
+#barraBuscador button:hover{background-color: rgb(102, 102, 102,0.8);cursor: pointer;transition: all 0.1s;}
+/**/
+#contentB{display: grid;grid-template-columns: repeat(auto-fill,25%);margin-top: 2%;}
+/**/
+#globo{justify-self: center;width: 70%;height: auto;border: solid 1px white;margin-bottom: 10%;border-radius: 15px;
+    color: wheat;text-align: center;}
+#globoTitulo{font-size: 1.5em;font-weight: bold;border-bottom: solid 1px wheat;padding:  5% 0% 5% 0%;}
+#datosGlobo{text-align: left;padding-top:2%;margin-left: 5%;display: flex;margin-bottom: 3%;}
+#datosGloboA{width: 50%;}
+#datosGloboB{width: 50%;text-align: center;}
+#datosGloboC{width: 50%;text-align: center;display: grid;grid-template-columns: 33.3% 33.3% 33.3% ;}
+#editar{font-size: 1.7em;color: greenyellow;}
+#eliminar{font-size: 1.7em;color: rgb(217, 35, 35);}
+#editar:hover{cursor: pointer;}
+#eliminar:hover{cursor: pointer;}
+#compartir{font-size: 1.7em;color: greenyellow;}
+#compartir:hover{cursor: pointer;}
+/*flechas*/
+#flechas{display: none;grid-template-columns: 60% 20% 20%;color: wheat;margin-top: 2%;text-align: center;width: 75%;margin-left: 10%;}
+#flechasIzquierda{padding: 2% 0% 2% 0%;background-color: rgb(63, 63, 63);border-radius: 15px;}
+#flechasIzquierda ion-icon{font-size: 2em;}
+#flechasIzquierda:hover{cursor: pointer;transition: all 0.1s;background-color: rgba(48, 46, 46, 0.5);}
+#flechasCantidad{padding: 2% 0% 2% 0%;background-color: rgb(31, 31, 31);border-radius: 15px;}
+#flechasDerecha{padding: 2% 0% 2% 0%;background-color: rgb(63, 63, 63);border-radius: 15px;}
+#flechasDerecha:hover{cursor: pointer;transition: all 0.1s;background-color: rgba(48, 46, 46, 0.5);}
+#flechasDerecha ion-icon{font-size: 2em;}
+/**/
+#crearUsuarioDB{position: absolute;left: 0;right: 0;margin: auto;
+    top: 10%;width: 60%;border:solid 2px rgb(73, 73, 73);height: 60vh;
+    overflow-y: auto;background-color: rgb(13, 13, 13);border-radius: 15px;
+    padding: 2%;text-align: center;transform-style: preserve-3d;
+    animation: animacionJuego ease 1s;}
+    @keyframes animacionJuego {
+        0%{top:0%}
+    }
+#nombre{color: white;display: grid;grid-template-columns: 30% 70%;margin-bottom: 2%;}
+#nombre label{font-size: 1.5em;}
+#nombre input{background-color: rgb(39, 39, 39);outline: none;border-radius: 5px;
+border: solid 1px rgb(123, 123, 123);color: white;padding: 2%;font-size: 1.5em;}
+#apodo{color: white;display: grid;grid-template-columns: 30% 70%;margin-bottom: 2%;}
+#apodo label{font-size: 1.5em;}
+#apodo input{background-color: rgb(39, 39, 39);outline: none;border-radius: 5px;
+border: solid 1px rgb(123, 123, 123);color: white;padding: 2%;font-size: 1.5em;}
+#cartera{color: white;display: grid;grid-template-columns: 30% 70%;margin-bottom: 2%;}
+#cartera label{font-size: 1.5em;}
+#cartera input{background-color: rgb(39, 39, 39);outline: none;border-radius: 5px;
+border: solid 1px rgb(123, 123, 123);color: white;padding: 2%;font-size: 1.5em;}
+#afiliacion{color: white;display: grid;grid-template-columns: 30% 70%;margin-bottom: 2%;}
+#afiliacion label{font-size: 1.5em;}
+#afiliacion select{background-color: rgb(39, 39, 39);outline: none;border-radius: 5px;
+border: solid 1px rgb(123, 123, 123);color: white;padding: 2%;font-size: 1.5em;}
+#botonesCrearUsuarios{display: flex;justify-content: center;}
+#Enviar{padding: 1% 5% 1% 4%;border-radius: 5px;background-color: rgb(87, 87, 87);margin-top: 2%;color: white;border: none;font-size: 1.1em;font-weight: bold;}
+#Enviar:hover{background-color: rgb(87, 87, 87,0.2);cursor: pointer;transition: all 0.1s;}
+#Salir{padding: 2% 5% 2% 4%;border-radius: 5px;background-color: rgb(176, 17, 17);margin-top: 2%;color: white;border: none;font-size: 1.2em;font-weight: bold;margin-right: 5%;}
+#Salir:hover{background-color: rgb(176, 17, 17,0.5);cursor: pointer;transition: all 0.1s;}
+/**/
+#mensajeDeUp{position: fixed;left: 0;right: 0;margin: auto;
+    top: 10%;width: 60%;border:solid 2px rgb(73, 73, 73);height: 60vh;
+    overflow-y: auto;background-color: rgb(13, 13, 13);border-radius: 15px;
+    padding: 2%;text-align: center;transform-style: preserve-3d;
+    animation: animacionJuego ease 1s;display: none;}
+    #EnviarUp{padding: 2% 5% 2% 4%;border-radius: 5px;background-color: rgb(76, 157, 44);margin-top: 2%;color: white;border: none;font-size: 1.2em;font-weight: bold;margin-right: 5%;}
+    #EnviarUp:hover{background-color: rgba(72, 163, 45, 0.5);cursor: pointer;transition: all 0.1s;}
+    #SalirUp{padding: 2% 5% 2% 4%;border-radius: 5px;background-color: rgb(176, 17, 17);margin-top: 2%;color: white;border: none;font-size: 1.2em;font-weight: bold;margin-right: 5%;}
+    #SalirUp:hover{background-color: rgb(176, 17, 17,0.5);cursor: pointer;transition: all 0.1s;}
+    /**/
+#mensajeDeCompartir{position: fixed;left: 0;right: 0;margin: auto;
+    top: 15%;width: 60%;border:solid 2px rgb(73, 73, 73);height: 20vh;
+    overflow-y: auto;background-color: rgb(13, 13, 13);border-radius: 15px;
+    padding: 2%;text-align: center;transform-style: preserve-3d;
+animation: animacionJuego ease 1s;display: none;}
+#urlParaEnviar{width: 80%;margin-left: 10%;background-color: rgb(147, 143, 143);padding: 15px;border-radius: 5px;}
+#Copiar{padding: 2% 5% 2% 4%;border-radius: 5px;background-color: rgb(76, 157, 44);margin-top: 2%;color: white;border: none;font-size: 1.2em;font-weight: bold;margin-right: 5%;}
+#Copiar:hover{background-color: rgba(72, 163, 45, 0.5);cursor: pointer;transition: all 0.1s;}
+#SalirA{padding: 2% 5% 2% 4%;border-radius: 5px;background-color: rgb(176, 17, 17);margin-top: 2%;color: white;border: none;font-size: 1.2em;font-weight: bold;margin-right: 5%;}
+#SalirA:hover{background-color: rgb(176, 17, 17,0.5);cursor: pointer;transition: all 0.1s;}
+/*multiplataformico*/
+@media (max-width:1220px) {
+/**/
+#contentB{display: grid;grid-template-columns: repeat(auto-fill,33.3%);margin-top: 2%;}
+}
+@media (max-width:989px) {
+    #contentB{display: grid;grid-template-columns: repeat(auto-fill,50%);margin-top: 2%;}
+/**/
+#crearUsuario{padding: 8% 4% 8% 4%;}
+#topContenido{display: grid;grid-template-columns: 25%40%25%;}
+#barraBuscador{grid-template-columns: 70% 30%;}
+/**/
+#nombre{grid-template-columns: repeat(auto-fill,100%);margin-bottom: 5%;}
+#apodo{grid-template-columns: repeat(auto-fill,100%);margin-bottom: 5%;}
+#cartera{grid-template-columns: repeat(auto-fill,100%);margin-bottom: 5%;}
+#afiliacion{grid-template-columns: repeat(auto-fill,100%);margin-bottom: 5%;}
+/**/
+
+}
+@media (max-width:698px) {
+    #contentB{display: grid;grid-template-columns: repeat(auto-fill,100%);margin-top: 2%;}
+    /**/
+    #crearUsuario{padding: 8% 4% 8% 4%;}
+    #topContenido{display: grid;grid-template-columns: 25%40%25%;}
+}
+@media (max-width:400px) {
+    #contentB{display: grid;grid-template-columns: repeat(auto-fill,100%);margin-top: 2%;}
+    #barraBuscador{grid-template-columns: 50% 50%;}
+    #topContenido{display: grid;grid-template-columns: 20%60%20%;}
+}

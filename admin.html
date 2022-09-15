@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usuarios</title>
+  <link rel="stylesheet" href="./style/admin.css" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body id="todo">
+  <ion-icon id="recargar" name="refresh-outline"></ion-icon>
+  <div id="contentA">
+    <div id="topContenido">
+      <div id="buscador">Buscar Usuario</div>
+      <form action="" id="barraBuscadorCampo">
+      </form>
+      <div id="barraBuscador">
+        <input id="nombreBuscar"" required type="text"></input>
+        <button id="nombreEnviar">Enviar</button>
+      </div>
+      <div id="crearUsuario">Crear Usuario</div>
+    </div>
+    <div id="flechas">
+      <div id="flechasCantidad"></div>
+      <div id="flechasIzquierda">
+        <ion-icon name="chevron-back-circle"></ion-icon>
+      </div>
+      <div id="flechasDerecha">
+        <ion-icon name="chevron-forward-circle"></ion-icon>
+      </div>
+    </div>
+    <div id="contentB">
+
+    </div>
+    <div id="mensajeDeUp">
+      <input name="idUP" type="text" style="visibility: hidden;">
+      <div id="nombre">
+        <label for="aa">Nombre</label>
+        <input name="nombreUP" type="text" autocomplete="off" required id="aa">
+      </div>
+      <div id="apodo">
+        <label for="bb">Apodo</label>
+        <input name="apodoUP" type="text" autocomplete="off" required id="bb">
+      </div>
+      <div id="cartera">
+        <label for="cc">Cartera</label>
+        <input name="carteraUP" type="number" required id="cc">
+      </div>
+      <div id="afiliacion">
+        <label>Afiliacion</label>
+        <select name="afiliacionUP">
+          <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+        </select>
+      </div>
+      <div id="botonesUp">
+        <div id="botonesCrearUsuarios">
+          <div id="SalirUp">Salir</div>
+          <button id="EnviarUp">Enviar</button>
+        </div>
+      </div>
+    </div>
+    <div id="mensajeDeCompartir">
+      <div id="urlParaEnviar"></div>
+      <div id="botonesCrearUsuarios">
+        <div id="SalirA">Salir</div>
+        <button id="Copiar">Copiar</button>
+      </div>
+    </div>
+    <div id="crearUsuarioDB">
+      <form action="./admin.html">
+        <div id="nombre">
+          <label for="a">Nombre</label>
+          <input name="nombre" type="text" autocomplete="off" required id="a">
+        </div>
+        <div id="apodo">
+          <label for="b">Apodo</label>
+          <input name="apodo" type="text" autocomplete="off" required id="b">
+        </div>
+        <div id="cartera">
+          <label for="c">Cartera</label>
+          <input name="cartera" type="number" required id="c">
+        </div>
+        <div id="afiliacion">
+          <label>Afiliacion</label>
+          <select name="afiliacion">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+        </div>
+        <div id="botonesCrearUsuarios">
+          <div id="Salir">Salir</div>
+          <button id="Enviar">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>
