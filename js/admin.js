@@ -1,6 +1,6 @@
 const nombreUnico=document.getElementById("a").addEventListener("keyup",(b)=>{
   async function letras(){
-    const datos=await axios.get("http://localhost:3000/usuariosNombres")
+    const datos=await axios.get("https://dbjuego.herokuapp.com/usuariosNombres")
     if(datos.data.find(a=>a===b.target.value)){
       document.getElementById("Enviar").style.display="none"
     }else{
@@ -11,7 +11,7 @@ const nombreUnico=document.getElementById("a").addEventListener("keyup",(b)=>{
 })  
 const nombreUnicoUP=document.getElementById("aa").addEventListener("keyup",(b)=>{
   async function letras(){
-    const datos=await axios.get("http://localhost:3000/usuariosNombres")
+    const datos=await axios.get("https://dbjuego.herokuapp.com/usuariosNombres")
     if(datos.data.find(a=>a===b.target.value)){
       document.getElementById("EnviarUp").style.display="none"
     }else{
@@ -82,7 +82,7 @@ function rellenar(b){
           <div id="datosGlobo"><div id="datosGloboA">Extras: </div><div id="datosGloboC">
             <div id="compartir" onclick="document.getElementById('mensajeDeCompartir').style.display='block';document.getElementById('urlParaEnviar').innerText='${location.href.replace("admin.html",'index.html')}?titulo=${a.Nombre}'"><ion-icon name="arrow-redo"></ion-icon></div>
             <div id="editar" onclick="document.getElementById('mensajeDeUp').style.display='block';document.getElementsByName('nombreUP')[0].value='${a.Nombre}';document.getElementsByName('apodoUP')[0].value='${a.Apodo}';document.getElementsByName('carteraUP')[0].value='${a.Cartera}';document.getElementsByName('afiliacionUP')[0].value='${a.Afiliacion}';document.getElementsByName('idUP')[0].value='${a._id}'"><ion-icon name="create"></ion-icon></div>
-            <div id="eliminar" onclick="(async()=>{await axios.post('http://localhost:3000/eliminarUsuario',{id:'${a._id}'})})();location.reload()"><ion-icon name="trash"></ion-icon></div>
+            <div id="eliminar" onclick="(async()=>{await axios.post('https://dbjuego.herokuapp.com/eliminarUsuario',{id:'${a._id}'})})();location.reload()"><ion-icon name="trash"></ion-icon></div>
         </div>
         </div>
         </div>
@@ -118,7 +118,7 @@ function rellenarA(b){
       <div id="datosGlobo"><div id="datosGloboA">Extras: </div><div id="datosGloboC">
         <div id="compartir" onclick="document.getElementById('mensajeDeCompartir').style.display='block';document.getElementById('urlParaEnviar').innerText='${location.href.replace("admin.html",'index.html')}?titulo=${a.Nombre}'"><ion-icon name="arrow-redo"></ion-icon></div>
         <div id="editar" onclick="document.getElementById('mensajeDeUp').style.display='block';document.getElementsByName('nombreUP')[0].value='${a.Nombre}';document.getElementsByName('apodoUP')[0].value='${a.Apodo}';document.getElementsByName('carteraUP')[0].value='${a.Cartera}';document.getElementsByName('afiliacionUP')[0].value='${a.Afiliacion}';document.getElementsByName('idUP')[0].value='${a._id}'"><ion-icon name="create"></ion-icon></div>
-        <div id="eliminar" onclick="(async()=>{await axios.post('http://localhost:3000/eliminarUsuario',{id:'${a._id}'})})();location.reload()"><ion-icon name="trash"></ion-icon></div>
+        <div id="eliminar" onclick="(async()=>{await axios.post('https://dbjuego.herokuapp.com/eliminarUsuario',{id:'${a._id}'})})();location.reload()"><ion-icon name="trash"></ion-icon></div>
     </div>
     </div>
     </div>
@@ -153,7 +153,7 @@ const EnvioPuroUP=document.getElementById("EnviarUp").addEventListener("click",(
   const idUP=document.getElementsByName("idUP")[0].value
   if(nombre!==undefined&&afiliacion!==undefined){
     async function Envio(){
-      return await axios.post("http://localhost:3000/editarUsuario",{id:idUP,nombre:nombre,apodo:apodo,cartera:cartera,afiliacion:afiliacion})
+      return await axios.post("https://dbjuego.herokuapp.com/editarUsuario",{id:idUP,nombre:nombre,apodo:apodo,cartera:cartera,afiliacion:afiliacion})
       .then((a) => {
         console.log(a);
       }).catch((e) => {
@@ -168,7 +168,7 @@ const EnvioPuroUP=document.getElementById("EnviarUp").addEventListener("click",(
 /**/
 async function datos() {
   return await axios
-    .get('http://localhost:3000/usuarios')
+    .get('https://dbjuego.herokuapp.com/usuarios')
     .then(a => {
       document.getElementById("flechasCantidad").innerText=`Pagina N°${pagina}`
       contentB.innerHTML="";
@@ -195,7 +195,7 @@ const EnvioPuro=document.getElementById("Enviar").addEventListener("click",()=>{
   const afiliacion=document.getElementsByName("afiliacion")[0].value
   if(nombre!==undefined&&afiliacion!==undefined){
     async function Envio(){
-      return await axios.post("http://localhost:3000/crearUsuarios",{nombre:nombre,apodo:apodo,cartera:cartera,afiliacion:afiliacion})
+      return await axios.post("https://dbjuego.herokuapp.com/crearUsuarios",{nombre:nombre,apodo:apodo,cartera:cartera,afiliacion:afiliacion})
       .then((a) => {
         console.log(a);
       }).catch((e) => {
@@ -210,7 +210,7 @@ const nombreBuscar=document.getElementById("nombreBuscar").addEventListener("key
   nombreEnviar.addEventListener("click",()=>{
     async function dat(){
       return await axios
-      .get('http://localhost:3000/usuarios')
+      .get('https://dbjuego.herokuapp.com/usuarios')
       .then(b => {
         document.getElementById("flechasCantidad").innerText=`Pagina N°${pagina}`
         contentB.innerHTML="";
